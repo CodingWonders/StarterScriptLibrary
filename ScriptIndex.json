@@ -1,0 +1,11 @@
+{
+    "scripts": [
+        {
+            "language": "Batch",
+            "name": "Disable Shutdown Event Tracker",
+            "description": "This script disables the shutdown event tracker on Windows Server ",
+            "customizable": false,
+            "fileName": "Disable Shutdown Event Tracker.dtss"
+        }
+    ]
+}
