@@ -1,0 +1,20 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Refresh Starter Script Index
+
+on:
+  pull_request_target:
+    types: 
+      - closed
+  workflow_dispatch:
+
+jobs:
+  if_merged:
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create and push index
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
