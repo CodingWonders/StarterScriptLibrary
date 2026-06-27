@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v7
       - name: Create and push index
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          ls -lA
+          echo Preparing reindex operation...
+          chmod +x ./dtssview.sh
+          echo Reindexing scripts...
+          ./dtssview.sh .
