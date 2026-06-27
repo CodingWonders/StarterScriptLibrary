@@ -14,9 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Create and push index
+      - name: Reindex scripts
         run: |
           echo Preparing reindex operation...
           chmod +x ./dtssview.sh
           echo Reindexing scripts...
-          ./dtssview.sh .
+          ./dtssview.sh . > ./ScriptIndex.json
+      - name: Push updated index
+        run: |
+          git config --global user.name "CodingWonders"
+          git config --global user.email "101426328+CodingWonders@users.noreply.github.com"
+          git add ./ScriptIndex.json
+          git commit -am "Refreshed Script Index"
+          git push
