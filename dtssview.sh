@@ -51,20 +51,20 @@ else
     echo -e "\"scripts\": ["
     for dtss in "$*"; do
         if [ -d "$dtss" ]; then
-	    # Get file count to determine when to stop appending commas
-	    lines=$(ls -lA "$dtss"/*.dtss | wc -l)
-	    fileIdx=0
-	    for file in "$dtss"/*.dtss; do
-	        readScript "$file"
-		fileIdx=$(($fileIdx+1))
-		if [ $fileIdx -lt $lines ]; then
-		    echo -n ","
-		fi
-		echo -en "\n"
-	    done
-	else
-	    readScript "$dtss"
-	fi
+        # Get file count to determine when to stop appending commas
+        lines=$(ls -lA "$dtss"/*.dtss | wc -l)
+        fileIdx=0
+        for file in "$dtss"/*.dtss; do
+            readScript "$file"
+            fileIdx=$(($fileIdx+1))
+            if [ $fileIdx -lt $lines ]; then
+                echo -n ","
+            fi
+            echo -en "\n"
+        done
+    else
+        readScript "$dtss"
+    fi
     done
     echo -e "]"
 fi
