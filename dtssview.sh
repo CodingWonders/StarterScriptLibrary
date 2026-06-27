@@ -33,13 +33,19 @@ function readScript() {
     dtssDesc=$(getItemProperty 3 "$1" | sed 's/^[[:space:]]*//' | tr -d '\r')
     dtssCust=$(getItemProperty 4 "$1" | cut -f2 -d? | tr -d " " | tr -d '\r')
     
-    echo -e "    {"
-    echo -e "        \"language\": \"$dtssLang\","
-    echo -e "        \"name\": \"$dtssName\","
-    echo -e "        \"description\": \"$dtssDesc\","
-    echo -e "        \"customizable\": \"$dtssCust\","
-    echo -e "        \"fileName\": \"$(basename "$scriptFile")\""
-    echo -en "    }"
+    if [[ "$dtssCust" == "Yes" ]]; then
+        dtssCust=true
+    else
+        dtssCust=false
+    fi
+    
+    echo -e "        {"
+    echo -e "            \"language\": \"$dtssLang\","
+    echo -e "            \"name\": \"$dtssName\","
+    echo -e "            \"description\": \"$dtssDesc\","
+    echo -e "            \"customizable\": $dtssCust,"
+    echo -e "            \"fileName\": \"$(basename "$scriptFile")\""
+    echo -en "        }"
 }
 
 if [ $# -lt 1 ]; then
@@ -48,7 +54,7 @@ if [ $# -lt 1 ]; then
     read -sn1
 else
     # Begin writing the JSON
-    echo -e "\"scripts\": ["
+    echo -e "{\n    \"scripts\": ["
     for dtss in "$*"; do
         if [ -d "$dtss" ]; then
         # Get file count to determine when to stop appending commas
@@ -66,5 +72,5 @@ else
         readScript "$dtss"
     fi
     done
-    echo -e "]"
+    echo -e "    ]\n}"
 fi
