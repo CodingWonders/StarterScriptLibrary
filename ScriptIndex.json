@@ -1,0 +1,11 @@
+{
+    "scripts": [
+        {
+            "language": "PowerShell",
+            "name": "Test for Upload",
+            "description": "Test Script for Upload",
+            "customizable": false,
+            "fileName": "sse_dtss_59cd43ed-993d-4162-bd05-463ca85756df.dtss"
+        }
+    ]
+}
