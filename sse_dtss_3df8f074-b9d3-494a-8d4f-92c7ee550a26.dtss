@@ -1,0 +1,8 @@
+Language: PowerShell
+Name: PIRATILLAS
+Description: CALCULADORA
+Customizable? No
+$a = 4
+$b = 5
+
+Write-Host "La suma es $($a + $b)"
