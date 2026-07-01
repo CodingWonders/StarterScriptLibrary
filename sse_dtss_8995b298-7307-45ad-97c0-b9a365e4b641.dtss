@@ -1,0 +1,5 @@
+Language: PowerShell
+Name: Test 3
+Description: Starter script upload test
+Customizable? No
+Write-Host "Hi, this is Test No 3 - Abs"
