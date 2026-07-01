@@ -1,0 +1,5 @@
+Language: PowerShell
+Name: Test 2
+Description: Starter script upload test
+Customizable? No
+Write-Host "Congrats on the promotion to Admin, you deserved it - Abs"
