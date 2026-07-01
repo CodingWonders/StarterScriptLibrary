@@ -2,6 +2,13 @@
     "scripts": [
         {
             "language": "PowerShell",
+            "name": "PIRATILLAS",
+            "description": "CALCULADORA",
+            "customizable": false,
+            "fileName": "sse_dtss_3df8f074-b9d3-494a-8d4f-92c7ee550a26.dtss"
+        },
+        {
+            "language": "PowerShell",
             "name": "Test for Upload",
             "description": "Test Script for Upload",
             "customizable": false,
