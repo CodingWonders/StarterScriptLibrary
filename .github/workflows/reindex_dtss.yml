@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
       - name: Reindex scripts
         run: |
           echo Preparing reindex operation...
