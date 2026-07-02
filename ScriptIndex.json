@@ -1,0 +1,11 @@
+{
+    "scripts": [
+        {
+            "language": "Batch",
+            "name": "Disable Windows Platform Binary Table (WPBT)",
+            "description": "This script disables the Windows Platform Binary Table, which can be used by computer manufacturers to preload applications that you may not need.",
+            "customizable": false,
+            "fileName": "sse_dtss_d6bd8e8d-8399-4929-a9f5-d1e998b5b78f.dtss"
+        }
+    ]
+}
