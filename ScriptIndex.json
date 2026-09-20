@@ -2,6 +2,13 @@
     "scripts": [
         {
             "language": "Batch",
+            "name": "Configure System Recovery Settings",
+            "description": "This script allows you to configure system error and recovery configuration.",
+            "customizable": true,
+            "fileName": "sse_dtss_41b051d3-2d4c-4f57-9902-d3026c9b3e2a.dtss"
+        },
+        {
+            "language": "Batch",
             "name": "Disable Windows Platform Binary Table (WPBT)",
             "description": "This script disables the Windows Platform Binary Table, which can be used by computer manufacturers to preload applications that you may not need.",
             "customizable": false,
